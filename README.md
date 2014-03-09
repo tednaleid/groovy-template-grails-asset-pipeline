@@ -33,7 +33,7 @@ creates application.js:
 var serverURL = "https://mycompany.com/";
 ```
 
-You can also execute more complicated expressions inside `<% ... %>` blocks, see the [jasmine tests]() for more examples.
+You can also execute more complicated expressions inside `<% ... %>` blocks, see the [jasmine tests](https://github.com/tednaleid/groovy-template-grails-asset-pipeline/blob/master/test/projects/test-project/grails-app/assets/javascripts/jasmine/spec/SimpleExpressionsSpec.js-gtpl) for more examples.
 
 NB: be sure to make sure when you build your war file that you're using the right environment to get the correct values out of `Config.groovy`.
 
