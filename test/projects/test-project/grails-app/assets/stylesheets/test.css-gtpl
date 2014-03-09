@@ -1,0 +1,12 @@
+<% if (true) { %>
+.css-working {
+    color: ${config.test.css.working.color} !important;
+}
+<% } %>
+
+.css-working {
+    color: red;
+}
+
+
+

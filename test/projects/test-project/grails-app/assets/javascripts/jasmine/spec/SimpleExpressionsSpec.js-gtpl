@@ -1,0 +1,61 @@
+describe("Simple Groovy Expressions", function() {
+
+  it("should leave plain old javascript expressions alone", function() {
+    expect(true).toEqual(true);
+  });
+
+  it("should evaluate groovy expressions", function() {
+    expect( ${1 + 1} ).toEqual(2);
+  });
+
+  it("has access to values in Config.groovy", function() {
+      expect( ${config.test.value.that.is.true} ).toEqual(true);
+      expect( "${config.test.value.that.is.string}" ).toEqual("string value");
+  });
+
+  it("can properly evaluate 'if' statements", function() {
+    var value = 0;
+
+    <% if (true) { %>
+      value += 1;
+    <% } else { %>
+      value -= 1;
+    <% } %>
+
+    expect(value).toEqual(1);
+  });
+
+  it("allows looping", function() {
+    var value = 0;
+
+    <% 5.times { %>
+      value += 1;
+    <% } %>
+
+    expect(value).toEqual(5);
+
+  });
+
+  it("can turn an enum into a list of javascript maps", function() {
+    <%
+      // quick groovy script to turn an enum into a JSON string
+      import groovy.json.JsonBuilder
+      import com.example.PhoneType
+
+      def phoneTypes = PhoneType.values().collect { phoneType ->
+            [id: phoneType.id, name: phoneType.displayValue]
+      }
+      def builder = new JsonBuilder()
+      builder(phoneTypes)
+      def phoneTypesJson = builder.toString()
+    %>
+
+    // emit the JSON string containing the phone types into the javascript
+    var phoneTypes = ${phoneTypesJson};
+
+    expect(phoneTypes).toContain({"id":"H","name":"Home"});
+    expect(phoneTypes).toContain({"id":"M","name":"Mobile"});
+    expect(phoneTypes).toContain({"id":"W","name":"Work"});
+  });
+
+});
