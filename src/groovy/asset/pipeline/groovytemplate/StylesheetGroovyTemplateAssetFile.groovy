@@ -9,6 +9,6 @@ class StylesheetGroovyTemplateAssetFile extends AbstractAssetFile {
 	static processors = [GroovyTemplateProcessor]
 
 	String directiveForLine(String line) {
-		return null
+		line.find(/\*=(.*)/) { fullMatch, directive -> return directive }
 	}
 }
