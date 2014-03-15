@@ -1,9 +1,9 @@
-<plugin name='groovy-template-asset-pipeline' version='0.1' grailsVersion='2.3.6 &gt; *'>
+<plugin name='groovy-template-grails-asset-pipeline' version='0.2' grailsVersion='2.3 &gt; *'>
   <author>Ted Naleid</author>
   <authorEmail>contact@naleid.com</authorEmail>
-  <title>Groovy Template Asset Pipeline Plugin</title>
+  <title>Groovy Template Grails Asset Pipeline Plugin</title>
   <description>Provides Groovy Template support (including Grails Config access) to asset pipeline js/css files</description>
   <documentation>http://github.com/tednaleid/groovy-template-grails-asset-pipeline</documentation>
-  <type>GroovyTemplateAssetPipelineGrailsPlugin</type>
+  <type>GroovyTemplateGrailsAssetPipelineGrailsPlugin</type>
   <resources />
 </plugin>

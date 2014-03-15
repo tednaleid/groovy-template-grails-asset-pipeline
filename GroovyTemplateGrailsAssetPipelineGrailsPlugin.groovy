@@ -2,14 +2,14 @@ import asset.pipeline.AssetHelper
 import asset.pipeline.groovytemplate.JavascriptGroovyTemplateAssetFile
 import asset.pipeline.groovytemplate.StylesheetGroovyTemplateAssetFile
 
-class GroovyTemplateAssetPipelineGrailsPlugin {
+class GroovyTemplateGrailsAssetPipelineGrailsPlugin {
     // the plugin version
-    def version = "0.1"
+    def version = "0.2"
 
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.3 > *"
 
-    def title = "Groovy Template Asset Pipeline Plugin"
+    def title = "Groovy Template Grails Asset Pipeline Plugin"
 
     def author = "Ted Naleid"
     def authorEmail = "contact@naleid.com"

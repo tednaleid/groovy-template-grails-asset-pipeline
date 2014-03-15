@@ -7,3 +7,5 @@ target
 out
 .idea
 *.tld
+*.zip
+*-ide-*.xml
