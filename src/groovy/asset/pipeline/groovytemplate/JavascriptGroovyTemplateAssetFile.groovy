@@ -9,6 +9,6 @@ class JavascriptGroovyTemplateAssetFile extends AbstractAssetFile {
 	static processors = [GroovyTemplateProcessor]
 
 	String directiveForLine(String line) {
-		return null
+		return line.find(/\/\/=(.*)/) { fullMatch, directive -> return directive }
 	}
 }
