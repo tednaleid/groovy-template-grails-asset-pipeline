@@ -1,5 +1,6 @@
 package asset.pipeline.groovytemplate
 
+import asset.pipeline.AssetCompiler
 import asset.pipeline.AssetFile
 import grails.util.Holders
 import groovy.text.SimpleTemplateEngine
@@ -12,7 +13,11 @@ class GroovyTemplateProcessor {
 
     def binding
 
-    GroovyTemplateProcessor(Boolean usePrecompiler = false) {
+    GroovyTemplateProcessor(AssetCompiler compiler) {
+      this()
+    }
+
+    GroovyTemplateProcessor() {
         def grailsApplication = Holders.grailsApplication
 
         this.engine = new SimpleTemplateEngine(this.class.classLoader)
