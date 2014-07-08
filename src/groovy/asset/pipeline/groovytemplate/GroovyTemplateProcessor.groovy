@@ -13,6 +13,10 @@ class GroovyTemplateProcessor {
 
     def binding
 
+    GroovyTemplateProcessor(processor) {
+      this()
+    }
+
     GroovyTemplateProcessor(AssetCompiler compiler) {
       this()
     }
