@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Jasmine Test Runner For Groovy Template Asset Pipline Plugin</title>
+  <title>Jasmine Test Runner For Groovy Template Asset Pipeline Plugin</title>
 
 
   <link rel="stylesheet" type="text/css" href="<g:assetPath src="jasmine/lib/jasmine-2.0.0/jasmine.css"/>">
@@ -15,6 +15,7 @@
   <asset:javascript src="jasmine/lib/jasmine-2.0.0/boot.js"/>
 
   <asset:javascript src="jasmine/spec/SimpleExpressionsSpec.js"/>
+  <asset:javascript src="jasmine/spec/JavascriptUrlAwareSpec.js"/>
 </head>
 
 <body>
