@@ -2,6 +2,7 @@ package asset.pipeline.groovytemplate
 
 import asset.pipeline.AbstractProcessor
 import asset.pipeline.AssetCompiler
+import asset.pipeline.AssetFile
 import asset.pipeline.AssetHelper
 import groovy.util.logging.Log4j
 
@@ -13,7 +14,7 @@ class JavascriptUrlAwareProcessor extends AbstractProcessor {
     }
 
     @Override
-    def process(inputText, assetFile) {
+    String process(String inputText, AssetFile assetFile) {
 
         if (!this.precompiler) return inputText
 
