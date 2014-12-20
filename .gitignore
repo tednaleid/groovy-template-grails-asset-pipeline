@@ -9,3 +9,4 @@ out
 *.tld
 *.zip
 *-ide-*.xml
+*.swp
