@@ -1,9 +1,3 @@
-import asset.pipeline.AssetHelper
-import asset.pipeline.JsAssetFile
-import asset.pipeline.groovytemplate.JavascriptGroovyTemplateAssetFile
-import asset.pipeline.groovytemplate.JavascriptUrlAwareProcessor
-import asset.pipeline.groovytemplate.StylesheetGroovyTemplateAssetFile
-
 class GroovyTemplateGrailsAssetPipelineGrailsPlugin {
     def version = "0.5"
 
@@ -29,11 +23,4 @@ class GroovyTemplateGrailsAssetPipelineGrailsPlugin {
     def dependsOn = [
         assetPipeline: "2.0 > *"
     ]
-
-
-    def doWithDynamicMethods = { ctx ->
-        AssetHelper.assetSpecs << JavascriptGroovyTemplateAssetFile
-        AssetHelper.assetSpecs << StylesheetGroovyTemplateAssetFile
-        JsAssetFile.processors << JavascriptUrlAwareProcessor
-    }
 }

@@ -1,7 +1,9 @@
 package asset.pipeline.groovytemplate
 
 import asset.pipeline.AbstractAssetFile
+import groovy.transform.CompileStatic
 
+@CompileStatic
 class StylesheetGroovyTemplateAssetFile extends AbstractAssetFile {
 	static final String contentType = 'text/css'
 	static extensions = ['css-gtpl']

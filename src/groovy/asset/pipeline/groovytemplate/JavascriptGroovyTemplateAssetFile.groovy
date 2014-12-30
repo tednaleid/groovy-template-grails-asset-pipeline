@@ -1,7 +1,9 @@
 package asset.pipeline.groovytemplate
 
 import asset.pipeline.AbstractAssetFile
+import groovy.transform.CompileStatic
 
+@CompileStatic
 class JavascriptGroovyTemplateAssetFile extends AbstractAssetFile {
 	static final String contentType = 'application/javascript'
 	static extensions = ['js-gtpl']
