@@ -115,3 +115,9 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+
+test.value.that.is.true = true
+test.value.that.is.string = "string value"
+test.css.working.color = "green"
