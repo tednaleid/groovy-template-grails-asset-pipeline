@@ -14,6 +14,7 @@ grails.project.dependency.resolution = {
     repositories {
         grailsCentral()
         mavenLocal()
+        jcenter()
         mavenCentral()
     }
     dependencies { }
