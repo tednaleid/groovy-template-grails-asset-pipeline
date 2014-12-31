@@ -1,4 +1,4 @@
-<plugin name='groovy-template-grails-asset-pipeline' version='0.2' grailsVersion='2.3 &gt; *'>
+<plugin name='groovy-template-grails-asset-pipeline' version='0.5' grailsVersion='2.4 &gt; *'>
   <author>Ted Naleid</author>
   <authorEmail>contact@naleid.com</authorEmail>
   <title>Groovy Template Grails Asset Pipeline Plugin</title>

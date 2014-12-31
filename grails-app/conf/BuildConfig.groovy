@@ -24,6 +24,6 @@ grails.project.dependency.resolution = {
               ":rest-client-builder:1.0.3") {
             export = false
         }
-        compile ":asset-pipeline:2.0.19"
+        compile ":asset-pipeline:2.0.21"
     }
 }
