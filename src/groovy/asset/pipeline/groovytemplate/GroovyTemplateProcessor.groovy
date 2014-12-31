@@ -1,5 +1,6 @@
 package asset.pipeline.groovytemplate
 
+import asset.pipeline.AbstractProcessor
 import asset.pipeline.AssetCompiler
 import asset.pipeline.AssetFile
 import grails.util.Holders
@@ -7,17 +8,14 @@ import groovy.text.SimpleTemplateEngine
 import groovy.util.logging.Log4j
 
 @Log4j
-class GroovyTemplateProcessor {
+class GroovyTemplateProcessor extends AbstractProcessor {
     def config
     def engine
 
     def binding
 
     GroovyTemplateProcessor(AssetCompiler compiler) {
-      this()
-    }
-
-    GroovyTemplateProcessor() {
+        super(compiler)
         def grailsApplication = Holders.grailsApplication
 
         this.engine = new SimpleTemplateEngine(this.class.classLoader)
@@ -28,7 +26,7 @@ class GroovyTemplateProcessor {
         ]
     }
 
-    def process(String inputText, AssetFile assetFile) {
+    String process(String inputText, AssetFile assetFile) {
         log.debug("Processing assetFile: ${assetFile.file.name}")
         StringWriter stringWriter = new StringWriter()
         try {

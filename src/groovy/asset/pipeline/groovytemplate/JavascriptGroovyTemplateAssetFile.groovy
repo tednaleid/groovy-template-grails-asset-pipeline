@@ -7,9 +7,10 @@ import java.util.regex.Pattern
 
 @CompileStatic
 class JavascriptGroovyTemplateAssetFile extends AbstractAssetFile {
-	static final String contentType = 'application/javascript'
-	static extensions = ['js-gtpl']
-	static final String compiledExtension = 'js'
-	static processors = [GroovyTemplateProcessor]
+    static final List<String> contentType = ['application/javascript', 'application/x-javascript','text/javascript']
+    static List<String> extensions = ['js-gtpl']
+    static String compiledExtension = 'js'
+    static processors = [GroovyTemplateProcessor]
+
     Pattern directivePattern = ~/(?m)^\/\/=(.*)/
 }
