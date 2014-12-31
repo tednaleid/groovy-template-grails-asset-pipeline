@@ -15,7 +15,6 @@
   <asset:javascript src="jasmine/lib/jasmine-2.0.0/boot.js"/>
 
   <asset:javascript src="jasmine/spec/SimpleExpressionsSpec.js"/>
-  <asset:javascript src="jasmine/spec/JavascriptUrlAwareSpec.js"/>
 </head>
 
 <body>
