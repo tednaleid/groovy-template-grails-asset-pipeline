@@ -27,7 +27,7 @@ class GroovyTemplateProcessor extends AbstractProcessor {
     }
 
     String process(String inputText, AssetFile assetFile) {
-        log.debug("Processing assetFile: ${assetFile.file.name}")
+        log.debug("Processing assetFile: ${assetFile.name}")
         StringWriter stringWriter = new StringWriter()
         try {
             engine.createTemplate(inputText).make(binding).writeTo(stringWriter)
